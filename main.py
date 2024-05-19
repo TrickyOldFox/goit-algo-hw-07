@@ -22,12 +22,6 @@ def sum_value_node(node) -> int:
     if node is None:
         return 0
 
-    if node.right is None:
-        return node.val + sum_value_node(node.left)
-
-    if node.left is None:
-        return node.val + sum_value_node(node.right)
-
     return (
         node.val +
         sum_value_node(node.right) +
